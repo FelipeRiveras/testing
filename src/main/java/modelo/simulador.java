@@ -127,10 +127,12 @@ public class simulador {
     public int[] simularCredito(String nombre,String rut,String monto,String cuotas){
         int montoE=Integer.parseInt(monto);
         int cuotasE=Integer.parseInt(cuotas);
-        float interes1= (float)(1.85/100);
+        float interes1;
+        interes1 = (float)(1.85/100);
         float interesS=1+interes1;
         double abajo=pow(interesS,cuotasE);
-        int valorcuota=(int)(interes1/montoE*(1-(1/abajo)));
+        int valorcuota;
+        valorcuota = (int)(interes1/montoE*(1-(1/abajo)));
         int totalcredito;
         totalcredito = (int)valorcuota*cuotasE;
         int[] a={montoE,cuotasE,valorcuota,totalcredito};
