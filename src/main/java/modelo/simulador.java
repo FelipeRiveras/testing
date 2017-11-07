@@ -130,7 +130,7 @@ public class simulador {
         float interes= (float)(1.85/100);
         float interesS=1+interes;
         double abajo=pow(interesS,cuotasE);
-        int valorcuota=(int)(montoE*(1-(1/abajo))/interes);
+        int valorcuota=(int)(montoE*(1-(1/abajo)));
         int totalcredito=(int)valorcuota*cuotasE;
         int[] a={montoE,cuotasE,valorcuota,totalcredito};
         return a;
